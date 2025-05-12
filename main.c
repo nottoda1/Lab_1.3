@@ -146,7 +146,7 @@ int main() {
     struct mg_mgr mgr;
     mg_mgr_init(&mgr);
     mg_http_listen(&mgr, "http://127.0.0.1:8081", fn, NULL);
-    printf("Server running on http://0.0.0.0:8081\n");
+    printf("Server running on http://127.0.0.1:8081\n");
     while (true) mg_mgr_poll(&mgr, 1000);
     return 0;
 }
