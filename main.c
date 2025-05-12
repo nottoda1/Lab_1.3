@@ -148,6 +148,5 @@ int main() {
     mg_http_listen(&mgr, "http://127.0.0.1:8081", fn, NULL);
     printf("Server running on http://0.0.0.0:8081\n");
     while (true) mg_mgr_poll(&mgr, 1000);
-    mg_mgr_free(&mgr);  // Не будет выполнено из-за бесконечного цикла
     return 0;
 }
